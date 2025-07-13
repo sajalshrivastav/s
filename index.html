@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal Code Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- <header>
+    <h1>Code Editor</h1>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header> -->
+    <header class="activity-bar">
+        <div class="pill-shape">
+    
+    
+            <i class="fa-regular fa-file custom-color" title="File"></i>
+            <i class="fa-regular fa-folder custom-color " title="Folder"></i>
+            <i class="fa-regular fa-star custom-color " title="Star"></i>
+        </div>
+
+        <div class="file-bar">
+            <label for="lang">New File:</label>
+            <select id="lang" onchange="createFile()">
+                <option value="js">JavaScript</option>
+                <option value="ts">TypeScript</option>
+                <option value="py">Python</option>
+                <option value="cpp">C++</option>
+            </select>
+        </div>
+    
+    
+    
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch" />
+                <span class="slider"></span>
+            </label>
+        </div>
+    
+    </header>
+
+    <main class="editor-container">
+
+
+        <div id="tabs" class="tabs"></div>
+        <div id="editor" class="monaco-editor"></div>
+
+        <div class="output-section">
+            <button onclick="runCode()"><i class="fa fa-play"></i> Run</button>
+            <button id="downloadBtn"><i class="fa fa-download"></i> Download</button>
+            <pre id="output"></pre>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typescript@5.4.3/lib/typescript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+    <script src="script.js"></script>
+<script>
+
+</script>
+</body>
+</html>
